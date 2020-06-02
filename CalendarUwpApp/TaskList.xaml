@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="CalendarUwpApp.TaskList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CalendarUwpApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <TextBlock Text="Tasks" HorizontalAlignment="Center" Margin="20" FontSize="30"/>
+        <Button Content="+" HorizontalAlignment="Center"/>
+        <ListView x:Name="Tasks" Margin="20">
+            <x:String>Washing</x:String>
+            <x:String>Dishes</x:String>
+            <x:String>Groceries</x:String>
+            <x:String>Homework</x:String>
+            <x:String>Workout</x:String>
+        </ListView>
+    </StackPanel>
+</Page>
