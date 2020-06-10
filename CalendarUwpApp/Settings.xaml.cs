@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using DataHelper;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
+using Windows.UI;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace CalendarUwpApp
 {
@@ -24,7 +12,39 @@ namespace CalendarUwpApp
     {
         public Settings()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+        }
+
+        private void Colours_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var colorName = e.AddedItems.First().ToString();
+            int index = 0;
+            Color color;
+            switch (colorName)
+            {
+                case "Blue":
+                    color = Colors.Blue;
+                    index = 0;
+                    break;
+
+                case "Green":
+                    color = Colors.Green;
+                    index = 1;
+                    break;
+
+                case "Red":
+                    color = Colors.Red;
+                    index = 2;
+                    break;
+
+                case "Yellow":
+                    color = Colors.Yellow;
+                    index = 3;
+                    break;
+            }
+
+            DataItemHelper.DensityColor = color;
+            DataItemHelper.DensityColorIndex = index;
         }
     }
 }

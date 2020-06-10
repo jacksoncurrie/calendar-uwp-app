@@ -1,17 +1,12 @@
-﻿using System;
+﻿using DataHelper;
+using DataHelper.CalendarItems;
+using DataHelper.TaskItems;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
+using System.Collections.ObjectModel;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace CalendarUwpApp
@@ -26,6 +21,9 @@ namespace CalendarUwpApp
             InitializeComponent();
             BackStack = new Stack();
             NavView.SelectedItem = NavView.MenuItems.OfType<NavigationViewItem>().First(n => n.Tag.Equals("calendar"));
+
+            DataItemHelper.TaskItems = new ObservableCollection<ITaskItem>();
+            DataItemHelper.CalendarItems = new ObservableCollection<ICalendarItem>();
         }
 
         private Stack BackStack { get; set; }
