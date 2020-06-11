@@ -126,7 +126,6 @@
     <Compile Include="DataHelper.cs" />
     <Compile Include="TaskItems\ITaskItem.cs" />
     <Compile Include="TaskItems\TaskItem.cs" />
-    <Compile Include="TaskItems\TaskPriority.cs" />
     <EmbeddedResource Include="Properties\Calendar.rd.xml" />
   </ItemGroup>
   <ItemGroup>

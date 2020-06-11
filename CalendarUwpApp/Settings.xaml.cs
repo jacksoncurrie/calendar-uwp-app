@@ -43,6 +43,7 @@ namespace CalendarUwpApp
                     break;
             }
 
+            // Add setting and data bound index
             DataItemHelper.DensityColor = color;
             DataItemHelper.DensityColorIndex = index;
         }

@@ -1,10 +1,7 @@
 ﻿using DataHelper.CalendarItems;
 using DataHelper.TaskItems;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using Windows.Storage;
 using Windows.UI;
 
 namespace DataHelper

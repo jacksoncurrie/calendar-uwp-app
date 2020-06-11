@@ -6,12 +6,10 @@ using System;
 using Windows.UI.Xaml.Input;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
+using CalendarUwpApp.Commands;
 
 namespace CalendarUwpApp
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class TaskList : Page
     {
         public TaskList()
@@ -64,9 +62,7 @@ namespace CalendarUwpApp
                 await message.ShowAsync();
             } 
             else
-            {
                 DataItemHelper.TaskItems.Add(new TaskItem(taskName));
-            }
         }
 
         private async void TasksList_ItemClick(object sender, ItemClickEventArgs e)
@@ -135,6 +131,7 @@ namespace CalendarUwpApp
 
         private void DeleteTask_Click(object sender, RoutedEventArgs e)
         {
+            // Run as command is already set up to handle this
             var deleteCommand = new DeleteTaskCommand();
             deleteCommand.Execute(OriginalSource.DataContext);
         }

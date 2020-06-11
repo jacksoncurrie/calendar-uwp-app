@@ -2,8 +2,6 @@
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml;
 
-// The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
-
 namespace CalendarUwpApp
 {
     public sealed partial class AddToCalendarForm : UserControl

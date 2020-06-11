@@ -3,7 +3,7 @@ using DataHelper.TaskItems;
 using System;
 using System.Windows.Input;
 
-namespace CalendarUwpApp
+namespace CalendarUwpApp.Commands
 {
     class DeleteTaskCommand : ICommand
     {
@@ -16,6 +16,7 @@ namespace CalendarUwpApp
 
         public void Execute(object parameter)
         {
+            // Used for deleting tasks from dialogs
             var task = parameter as ITaskItem;
             DataItemHelper.TaskItems.Remove(task);
         }

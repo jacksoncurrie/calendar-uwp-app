@@ -11,9 +11,6 @@ using Windows.UI.Xaml.Navigation;
 
 namespace CalendarUwpApp
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         public MainPage()
@@ -22,6 +19,7 @@ namespace CalendarUwpApp
             BackStack = new Stack();
             NavView.SelectedItem = NavView.MenuItems.OfType<NavigationViewItem>().First(n => n.Tag.Equals("calendar"));
 
+            // Initialise items for use just as the main page is open
             DataItemHelper.TaskItems = new ObservableCollection<ITaskItem>();
             DataItemHelper.CalendarItems = new ObservableCollection<ICalendarItem>();
         }
