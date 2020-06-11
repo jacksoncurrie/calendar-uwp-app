@@ -8,10 +8,18 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
     <StackPanel>
         <TextBlock Text="Settings" HorizontalAlignment="Center" Margin="20" FontSize="30"/>
         <ComboBox Header="Calendar Event Colours" SelectedIndex="{x:Bind helper:DataItemHelper.DensityColorIndex}" 
-                  Width="300" HorizontalAlignment="Center" SelectionChanged="Colours_SelectionChanged">
+                  SelectionChanged="Colours_SelectionChanged" Style="{StaticResource ColorPicker}">
             <x:String>Blue</x:String>
             <x:String>Green</x:String>
             <x:String>Red</x:String>

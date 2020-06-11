@@ -8,6 +8,14 @@
     d:DesignHeight="220"
     d:DesignWidth="440">
 
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -22,15 +30,15 @@
             <ColumnDefinition Width="280"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock x:Name="ItemNameLabel" Text="Item name" VerticalAlignment="Bottom" Margin="0,0,0,5"/>
+        <TextBlock x:Name="ItemNameLabel" Text="Item name" Style="{StaticResource ItemName}" />
         <TextBox x:Name="ItemNameField" Grid.Row="1" Grid.ColumnSpan="2"/>
 
-        <TextBlock Text="Start date and time" Grid.Row="2" VerticalAlignment="Bottom" Margin="0,20,0,5"/>
-        <CalendarDatePicker x:Name="StartDatePicker" Grid.Row="3" HorizontalAlignment="Stretch" Margin="0,0,10,0"/>
-        <TimePicker x:Name="StartTimePicker" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,0,0" MinWidth="0"/>
+        <TextBlock Text="Start date and time" Grid.Row="2" Style="{StaticResource DatePickers}"/>
+        <CalendarDatePicker x:Name="StartDatePicker" Grid.Row="3" HorizontalAlignment="Stretch"/>
+        <TimePicker x:Name="StartTimePicker" Grid.Row="3" Grid.Column="1" Style="{StaticResource TimePicker}"/>
 
-        <TextBlock Text="End date and time" Grid.Row="4" VerticalAlignment="Bottom" Margin="0,20,0,5"/>
-        <CalendarDatePicker x:Name="EndDatePicker" Grid.Row="5" HorizontalAlignment="Stretch" Margin="0,0,10,0"/>
-        <TimePicker x:Name="EndTimePicker" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,0,0" MinWidth="0"/>
+        <TextBlock Text="End date and time" Grid.Row="4" Style="{StaticResource DatePickers}"/>
+        <CalendarDatePicker x:Name="EndDatePicker" Grid.Row="5" HorizontalAlignment="Stretch"/>
+        <TimePicker x:Name="EndTimePicker" Grid.Row="5" Grid.Column="1" Style="{StaticResource TimePicker}"/>
     </Grid>
 </UserControl>

@@ -8,7 +8,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <NavigationView x:Name="NavView" IsSettingsVisible="True" PaneTitle="Calendar" SelectionChanged="NavView_SelectionChanged" BackRequested="NavigationView_BackRequested">
+        <NavigationView x:Name="NavView" IsSettingsVisible="True" PaneTitle="Calendar" SelectionChanged="NavView_SelectionChanged" 
+                        BackRequested="NavigationView_BackRequested">
             <NavigationView.MenuItems>
                 <NavigationViewItem x:Uid="CalendarNavItem" Icon="Calendar" Content="Calendar" Tag="calendar"/>
                 <NavigationViewItem x:Uid="TaskListNavItem" Icon="Bullets" Content="Task List" Tag="taskList"/>
